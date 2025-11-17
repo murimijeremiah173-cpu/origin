@@ -1,0 +1,22 @@
+public class VacationCost {
+
+    // Adds up the three cost items and gives back the final total.
+    public static double calculateTotalCost(double accommodationCost,
+                                            double mealCost,
+                                            double activityCost) {
+        double sum = accommodationCost + mealCost + activityCost;
+        return sum;
+    }
+
+    public static void main(String[] args) {
+
+        // Sample values to try out the method.
+        double stay = 900.50;
+        double food = 350.25;
+        double fun = 200.00;
+
+        double finalCost = calculateTotalCost(stay, food, fun);
+
+        System.out.println("Total Vacation Cost: $" + String.format("%.2f", finalCost));
+    }
+}
