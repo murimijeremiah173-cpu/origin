@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class FitnessApp {
+
+    // Looks at the number of steps and returns a simple rating.
+    public static String getFitnessLevel(int steps) {
+
+        if (steps >= 10000) {
+            return "Excellent";
+        } 
+        if (steps >= 7000) {
+            return "Good";
+        }
+        if (steps >= 4000) {
+            return "Average";
+        }
+
+        return "Poor";
+    }
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter your steps for today: ");
+        int stepsToday = scanner.nextInt();
+
+        String level = getFitnessLevel(stepsToday);
+
+        System.out.println("\nYour fitness level: " + level);
+        
+        scanner.close();
+    }
+}
